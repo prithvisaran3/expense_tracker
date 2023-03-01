@@ -1,7 +1,9 @@
 import 'dart:math';
 import 'dart:ui';
+import 'package:expense_tracker/screens/Signup.dart';
 import 'package:expense_tracker/utils/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:slide_to_act/slide_to_act.dart';
 
 class login extends StatelessWidget {
   login({Key? key}) : super(key: key);
@@ -9,6 +11,7 @@ class login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: SafeArea(
         child: Container(
             decoration: BoxDecoration(
@@ -28,7 +31,7 @@ class login extends StatelessWidget {
                         text: TextSpan(
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 50,
+                            fontSize: 52,
                             fontWeight: FontWeight.bold,
                           ),
                           text: "Hey,  \nLogin",
@@ -44,7 +47,7 @@ class login extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 18),
+                  SizedBox(height: 15),
                   TextFormField(
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
@@ -76,7 +79,27 @@ class login extends StatelessWidget {
                       hintText: "Enter your password",
                     ),
                   ),
-                  SizedBox(height: 5),
+                  SizedBox(height: 20),
+                  // SlideAction(
+                  //   borderRadius: 12,
+                  //   elevation: 0,
+                  //   innerColor: kPrimaryColor,
+                  //   outerColor: Colors.black12,
+                  //   sliderButtonIcon: Icon(
+                  //     Icons.lock_open,
+                  //     size: 15,
+                  //   ),
+                  //   text: 'Swipe to Login',
+                  //   textStyle: TextStyle(
+                  //     fontSize: 18,
+                  //   ),
+                  //   onSubmit: () {
+                  //     Navigator.push(context,
+                  //         MaterialPageRoute(builder: (context) {
+                  //       return login();
+                  //     }));
+                  //   },
+                  // ),
                   ElevatedButton(
                     onPressed: () {
                       Navigator.push(context,
@@ -103,7 +126,7 @@ class login extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 5),
+                  SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -119,7 +142,7 @@ class login extends StatelessWidget {
                         onTap: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return login();
+                            return esignup();
                           }));
                         },
                         child: Text(
