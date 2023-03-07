@@ -1,5 +1,5 @@
 // import 'package:flutter/material.dart';
 //
-// commonPrint({requiered status, requiered msg}) {
+// commonPrint({required status, required msg}) {
 //   return debugPrint("status: $status, message: $msg");
 // }

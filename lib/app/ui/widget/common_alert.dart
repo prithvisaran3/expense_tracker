@@ -5,7 +5,7 @@
 // import 'common_text.dart';
 //
 // commonAlertDialog(BuildContext context,
-//     {requiered String content, requiered Function() confirmButtonPressed}) {
+//     {required String content, required Function() confirmButtonPressed}) {
 //   // set up the buttons
 //   Widget cancelButton = TextButton(
 //     child: Container(
@@ -90,7 +90,7 @@
 // }
 //
 // successAlert(BuildContext context,
-//     {requiered String content, requiered Function() confirmButtonPressed}) {
+//     {required String content, required Function() confirmButtonPressed}) {
 //   var media = MediaQuery.of(context).size;
 //   Widget continueButton = TextButton(
 //     onPressed: confirmButtonPressed,
@@ -160,7 +160,7 @@
 // }
 //
 // errorAlert(BuildContext context,
-//     {requiered String content, requiered Function() confirmButtonPressed}) {
+//     {required String content, required Function() confirmButtonPressed}) {
 //   var media = MediaQuery.of(context).size;
 //   Widget continueButton = TextButton(
 //     onPressed: confirmButtonPressed,
@@ -230,7 +230,7 @@
 // }
 //
 // rejectDialog(BuildContext context,
-//     {requiered String content, requiered Function() confirmButtonPressed}) {
+//     {required String content, required Function() confirmButtonPressed}) {
 //   var media = MediaQuery.of(context).size;
 //   // set up the buttons
 //   Widget cancelButton = TextButton(
@@ -335,7 +335,7 @@
 // }
 //
 // updateAlertDialog(BuildContext context,
-//     {requiered String content, requiered Function() confirmButtonPressed}) {
+//     {required String content, required Function() confirmButtonPressed}) {
 //   // set up the buttons
 //   Widget cancelButton = TextButton(
 //     child: Container(
@@ -410,7 +410,7 @@
 //   );
 // }
 //
-// dynamic loadingAlertDialog(BuildContext context, {requiered Widget child}) {
+// dynamic loadingAlertDialog(BuildContext context, {required Widget child}) {
 //   // set up the AlertDialog
 //   AlertDialog alert = AlertDialog(
 //       alignment: Alignment.center,

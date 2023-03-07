@@ -122,7 +122,7 @@
 //   );
 // }
 //
-// Center buildText({requiered String text}) {
+// Center buildText({required String text}) {
 //   return Center(
 //     child: Container(
 //       height: 30,

@@ -44,7 +44,8 @@ class _CommonTextFormFieldState extends State<CommonTextFormField> {
           prefixIcon: widget.prefixIcon,
             hintText: widget.hintText,
             errorText: widget.errorText,
-            hintStyle: const TextStyle(fontFamily: "Oswald"),
+            hintStyle:  TextStyle(
+                color:ewhite.withOpacity(.3),fontFamily: "Oswald"),
             counterText: "",
             contentPadding: const EdgeInsets.only(left: 15),
             enabledBorder:OutlineInputBorder(

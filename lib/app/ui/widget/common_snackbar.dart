@@ -3,21 +3,21 @@
 //
 // import '../themes/app_colors.dart';
 //
-// commonSnackBar({requiered title, requiered msg}) {
+// commonSnackBar({required title, required msg}) {
 //   Get.snackbar(title, msg, snackPosition: SnackPosition.BOTTOM);
 // }
 //
-// alertSnackBar({requiered msg}) {
+// alertSnackBar({required msg}) {
 //   Get.snackbar("Alert", "$msg",
 //       backgroundColor: AppColors.ered,
 //       snackStyle: SnackStyle.FLOATING,
 //       colorText: AppColors.ewhite);
 // }
 //
-// nothingSnackBar({requiered msg}) {
+// nothingSnackBar({required msg}) {
 //   Get.snackbar("Alert", "$msg", snackPosition: SnackPosition.BOTTOM);
 // }
 //
-// successSnackBar({requiered msg}) {
+// successSnackBar({required msg}) {
 //   Get.snackbar("Alert", "$msg", snackPosition: SnackPosition.TOP);
 // }
