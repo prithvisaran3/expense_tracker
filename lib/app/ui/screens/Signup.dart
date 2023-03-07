@@ -13,7 +13,7 @@ class esignup extends StatelessWidget {
       body: SafeArea(
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.black,
+            color: eblack,
           ),
           child: SingleChildScrollView(
             child: Padding(
@@ -27,7 +27,7 @@ class esignup extends StatelessWidget {
                       RichText(
                         text: TextSpan(
                           style: TextStyle(
-                            color: Colors.white,
+                            color: ewhite,
                             fontSize: 52,
                             fontWeight: FontWeight.bold,
                           ),
@@ -57,11 +57,11 @@ class esignup extends StatelessWidget {
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.white),
+                        borderSide:  BorderSide(color: ewhite),
                         borderRadius: BorderRadius.circular(8),
                       ),
                       hintText: "Name",
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintStyle: TextStyle(color: ewhite),
                     ),
                   ),
                   SizedBox(height: 20),
@@ -77,10 +77,10 @@ class esignup extends StatelessWidget {
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(color: Colors.white),
+                          borderSide: BorderSide(color: ewhite),
                           borderRadius: BorderRadius.circular(8)),
                       hintText: "Phone Number",
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintStyle: TextStyle(color: ewhite),
                     ),
                   ),
                   SizedBox(height: 20),
@@ -96,10 +96,10 @@ class esignup extends StatelessWidget {
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(color: Colors.white),
+                          borderSide:  BorderSide(color: ewhite),
                           borderRadius: BorderRadius.circular(8)),
                       hintText: "Email",
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintStyle: TextStyle(color: ewhite),
                     ),
                   ),
                   SizedBox(height: 20),
@@ -116,10 +116,10 @@ class esignup extends StatelessWidget {
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(color: Colors.white),
+                          borderSide:  BorderSide(color: ewhite),
                           borderRadius: BorderRadius.circular(8)),
                       hintText: "Password",
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintStyle: TextStyle(color: ewhite),
                     ),
                   ),
                   SizedBox(height: 40),
@@ -140,7 +140,7 @@ class esignup extends StatelessWidget {
                       child: Container(
                           child: Text(
                         "Sign Up",
-                        style: TextStyle(color: Colors.black),
+                        style: TextStyle(color: eblack),
                       )),
                     ),
                     style: ElevatedButton.styleFrom(
@@ -164,7 +164,7 @@ class esignup extends StatelessWidget {
                         height: 10,
                         width: MediaQuery.of(context).size.width / 4,
                         child: Divider(
-                          color: Colors.white,
+                          color: ewhite,
                           thickness: 2,
                         ),
                       ),
@@ -179,7 +179,7 @@ class esignup extends StatelessWidget {
                         height: 10,
                         width: MediaQuery.of(context).size.width / 4,
                         child: Divider(
-                          color: Colors.white,
+                          color: ewhite,
                           thickness: 2,
                         ),
                       ),

@@ -20,13 +20,13 @@ class ExpenseApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: eBackgroundcolor,
-        textTheme: Theme.of(context).textTheme.apply(bodyColor: Colors.white),
+        textTheme: Theme.of(context).textTheme.apply(bodyColor: ewhite),
       ),
       home: AnimatedSplashScreen(
         splash: splash(),
         nextScreen: login(),
         splashTransition: SplashTransition.fadeTransition,
-        backgroundColor: Colors.black,
+        backgroundColor: eblack,
       ),
     );
   }

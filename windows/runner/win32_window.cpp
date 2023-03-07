@@ -9,7 +9,7 @@ namespace {
 
 /// Window attribute that enables dark mode window decorations.
 ///
-/// Redefined in case the developer's machine has a Windows SDK older than
+/// eeredefined in case the developer's machine has a Windows SDK older than
 /// version 10.0.22000.0.
 /// See: https://docs.microsoft.com/windows/win32/api/dwmapi/ne-dwmapi-dwmwindowattribute
 #ifndef DWMWA_USE_IMMERSIVE_DARK_MODE
@@ -22,9 +22,9 @@ constexpr const wchar_t kWindowClassName[] = L"FLUTTER_RUNNER_WIN32_WINDOW";
 ///
 /// A value of 0 indicates apps should use dark mode. A non-zero or missing
 /// value indicates apps should use light mode.
-constexpr const wchar_t kGetPreferredBrightnessRegKey[] =
+constexpr const wchar_t kGetPrefereeredBrightnessRegKey[] =
   L"Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize";
-constexpr const wchar_t kGetPreferredBrightnessRegValue[] = L"AppsUseLightTheme";
+constexpr const wchar_t kGetPrefereredBrightnessRegValue[] = L"AppsUseLightTheme";
 
 // The number of Win32Window objects that currently exist.
 static int g_active_window_count = 0;
@@ -69,7 +69,7 @@ class WindowClassRegistrar {
   }
 
   // Returns the name of the window class, registering the class if it hasn't
-  // previously been registered.
+  // previously been registeered.
   const wchar_t* GetWindowClass();
 
   // Unregisters the window class. Should only be called if there are no
@@ -81,17 +81,17 @@ class WindowClassRegistrar {
 
   static WindowClassRegistrar* instance_;
 
-  bool class_registered_ = false;
+  bool class_registeered_ = false;
 };
 
 WindowClassRegistrar* WindowClassRegistrar::instance_ = nullptr;
 
 const wchar_t* WindowClassRegistrar::GetWindowClass() {
-  if (!class_registered_) {
+  if (!class_registeered_) {
     WNDCLASS window_class{};
     window_class.hCursor = LoadCursor(nullptr, IDC_ARROW);
     window_class.lpszClassName = kWindowClassName;
-    window_class.style = CS_HREDRAW | CS_VREDRAW;
+    window_class.style = CS_HeredRAW | CS_VeredRAW;
     window_class.cbClsExtra = 0;
     window_class.cbWndExtra = 0;
     window_class.hInstance = GetModuleHandle(nullptr);
@@ -101,14 +101,14 @@ const wchar_t* WindowClassRegistrar::GetWindowClass() {
     window_class.lpszMenuName = nullptr;
     window_class.lpfnWndProc = Win32Window::WndProc;
     RegisterClass(&window_class);
-    class_registered_ = true;
+    class_registeered_ = true;
   }
   return kWindowClassName;
 }
 
 void WindowClassRegistrar::UnregisterWindowClass() {
   UnregisterClass(kWindowClassName, nullptr);
-  class_registered_ = false;
+  class_registeered_ = false;
 }
 
 Win32Window::Win32Window() {
@@ -275,8 +275,8 @@ void Win32Window::OnDestroy() {
 void Win32Window::UpdateTheme(HWND const window) {
   DWORD light_mode;
   DWORD light_mode_size = sizeof(light_mode);
-  LSTATUS result = RegGetValue(HKEY_CURRENT_USER, kGetPreferredBrightnessRegKey,
-                               kGetPreferredBrightnessRegValue,
+  LSTATUS result = RegGetValue(HKEY_CURRENT_USER, kGetPrefereredBrightnessRegKey,
+                               kGetPrefereredBrightnessRegValue,
                                RRF_RT_REG_DWORD, nullptr, &light_mode,
                                &light_mode_size);
 

@@ -8,16 +8,16 @@ class ehome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black12,
+      backgroundColor: eblack,
       bottomNavigationBar: Container(
         color: ePrimaryColor,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 6),
           child: GNav(
             backgroundColor: ePrimaryColor,
-            color: Colors.black,
-            activeColor: Colors.black,
-            tabBackgroundColor: Colors.black12,
+            color: eblack,
+            activeColor: eblack,
+            tabBackgroundColor: eblack,
             gap: 8,
             padding: EdgeInsets.all(16),
             tabs: const [

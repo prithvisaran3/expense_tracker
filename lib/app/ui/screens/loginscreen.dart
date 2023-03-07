@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:expense_tracker/app/ui/screens/Signup.dart';
 import 'package:expense_tracker/app/ui/screens/homescreen.dart';
 import 'package:expense_tracker/app/ui/themes/app_colors.dart';
+import 'package:expense_tracker/app/ui/widget/common_textform_field.dart';
 import 'package:flutter/material.dart';
 // import 'package:slide_to_act/slide_to_act.dart';
 
@@ -31,7 +32,7 @@ class login extends StatelessWidget {
                       child: RichText(
                         text: TextSpan(
                           style: TextStyle(
-                            color: Colors.white,
+                            color: ewhite,
                             fontSize: 52,
                             fontWeight: FontWeight.bold,
                           ),
@@ -49,46 +50,33 @@ class login extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 15),
-                  TextFormField(
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                      hintStyle: TextStyle(
-                        color: Colors.white,
-                      ),
-                      prefixIcon: Icon(Icons.mail, color: ePrimaryColor),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.grey),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: ePrimaryColor),
-                      ),
-                      hintText: "Enter your email ID",
-                    ),
-                  ),
-                  SizedBox(height: 15),
-                  TextFormField(
-                    obscureText: true,
-                    keyboardType: TextInputType.text,
-                    decoration: InputDecoration(
-                      hintStyle: TextStyle(
-                        color: Colors.white,
-                      ),
-                      prefixIcon:
-                          Icon(Icons.lock_clock_outlined, color: ePrimaryColor),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.grey),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
+                  CommonTextFormField(
+                      hintText: "Enter your email",
+                      // controller: AuthController.to.lEmail,
+                      validator: (data) {
+                        if (data!.isEmpty || data == "") {
+                          return "Email field required";
+                        }
+                        return null;
+                      }),
+                  CommonTextFormField(
                       hintText: "Enter your password",
-                    ),
-                  ),
+                      obscureText: true,
+                      // controller: AuthController.to.lPassword,
+                      validator: (data) {
+                        if (data!.isEmpty || data == "") {
+                          return "Password field required";
+                        } else if (data.length < 2) {
+                          return "Password atleast 6 character";
+                        }
+                        return null;
+                      }),
                   SizedBox(height: 20),
                   // SlideAction(
                   //   borderRadius: 12,
                   //   elevation: 0,
                   //   innerColor: ePrimaryColor,
-                  //   outerColor: Colors.black12,
+                  //   outerColor: Colors.eblack12,
                   //   sliderButtonIcon: Icon(
                   //     Icons.lock_open,
                   //     size: 15,
@@ -115,7 +103,7 @@ class login extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         "Login",
-                        style: TextStyle(color: Colors.black),
+                        style: TextStyle(color: eblack),
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
@@ -137,7 +125,7 @@ class login extends StatelessWidget {
                       Text(
                         "Don't have an account? ",
                         style: TextStyle(
-                          color: Colors.white,
+                          color: ewhite,
                           fontWeight: FontWeight.bold,
                           fontStyle: FontStyle.italic,
                         ),

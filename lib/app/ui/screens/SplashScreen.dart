@@ -29,7 +29,7 @@ class _splashState extends State<splash> {
       body: SafeArea(
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.black,
+            color: eblack,
           ),
           child: Padding(
             padding: const EdgeInsets.all(10.0),
@@ -42,7 +42,7 @@ class _splashState extends State<splash> {
                   child: RichText(
                     text: TextSpan(
                       style: TextStyle(
-                        color: Colors.white,
+                        color: ewhite,
 
                         fontWeight: FontWeight.bold,
                       ),
