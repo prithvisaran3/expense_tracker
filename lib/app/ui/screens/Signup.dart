@@ -1,5 +1,6 @@
-import 'package:expense_tracker/screens/loginscreen.dart';
-import 'package:expense_tracker/utils/constant.dart';
+
+import 'package:expense_tracker/app/ui/screens/loginscreen.dart';
+import 'package:expense_tracker/app/ui/themes/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class esignup extends StatelessWidget {
@@ -34,7 +35,7 @@ class esignup extends StatelessWidget {
                           children: [
                             TextSpan(
                               style: TextStyle(
-                                color: kPrimaryColor,
+                                color: ePrimaryColor,
                               ),
                               text: "Now.",
                             ),
@@ -52,7 +53,7 @@ class esignup extends StatelessWidget {
                         heightFactor: 1.0,
                         child: Icon(
                           Icons.person,
-                          color: kPrimaryColor,
+                          color: ePrimaryColor,
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
@@ -72,7 +73,7 @@ class esignup extends StatelessWidget {
                         heightFactor: 1.0,
                         child: Icon(
                           Icons.phone_android,
-                          color: kPrimaryColor,
+                          color: ePrimaryColor,
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
@@ -91,7 +92,7 @@ class esignup extends StatelessWidget {
                         heightFactor: 1.0,
                         child: Icon(
                           Icons.email_rounded,
-                          color: kPrimaryColor,
+                          color: ePrimaryColor,
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
@@ -111,7 +112,7 @@ class esignup extends StatelessWidget {
                         heightFactor: 1.0,
                         child: Icon(
                           Icons.key,
-                          color: kPrimaryColor,
+                          color: ePrimaryColor,
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
@@ -147,7 +148,7 @@ class esignup extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30),
                         ),
                         elevation: 1,
-                        primary: kPrimaryColor,
+                        primary: ePrimaryColor,
                         textStyle: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
@@ -199,7 +200,7 @@ class esignup extends StatelessWidget {
                         child: Text(
                           "Log In",
                           style: TextStyle(
-                            color: kPrimaryColor,
+                            color: ePrimaryColor,
                           ),
                         ),
                       ),

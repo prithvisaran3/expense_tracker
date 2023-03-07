@@ -1,6 +1,6 @@
-import 'package:expense_tracker/utils/constant.dart';
+import 'package:expense_tracker/app/ui/screens/loginscreen.dart';
+import 'package:expense_tracker/app/ui/themes/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:expense_tracker/screens/loginscreen.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 class splash extends StatefulWidget {
@@ -43,14 +43,14 @@ class _splashState extends State<splash> {
                     text: TextSpan(
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 32,
+
                         fontWeight: FontWeight.bold,
                       ),
                       text: "Hello,\n",
                       children: [
                         TextSpan(
                           style: TextStyle(
-                            color: kPrimaryColor,
+                            color: ePrimaryColor,
                           ),
                           text: "Welcome",
                         ),

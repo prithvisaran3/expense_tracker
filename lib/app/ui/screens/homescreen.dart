@@ -1,5 +1,5 @@
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:expense_tracker/utils/constant.dart';
+import 'package:expense_tracker/app/ui/themes/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class ehome extends StatelessWidget {
@@ -10,11 +10,11 @@ class ehome extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black12,
       bottomNavigationBar: Container(
-        color: kPrimaryColor,
+        color: ePrimaryColor,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 6),
           child: GNav(
-            backgroundColor: kPrimaryColor,
+            backgroundColor: ePrimaryColor,
             color: Colors.black,
             activeColor: Colors.black,
             tabBackgroundColor: Colors.black12,
