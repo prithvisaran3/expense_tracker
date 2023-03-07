@@ -9,10 +9,12 @@ class CommonTextFormField extends StatefulWidget {
       this.validator,
       this.obscureText,
       this.maxLength,
+        this.prefixIcon,
       this.errorText})
       : super(key: key);
   final String hintText;
   final String? errorText;
+  final Icon? prefixIcon;
   final TextEditingController? controller;
   final String? Function(String?)? validator;
   final bool? obscureText;
@@ -39,6 +41,7 @@ class _CommonTextFormFieldState extends State<CommonTextFormField> {
         obscuringCharacter: "*",
         obscureText: widget.obscureText == true ? !passwordVisible : false,
         decoration: InputDecoration(
+          prefixIcon: widget.prefixIcon,
             hintText: widget.hintText,
             errorText: widget.errorText,
             hintStyle: const TextStyle(fontFamily: "Oswald"),

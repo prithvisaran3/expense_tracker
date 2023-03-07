@@ -51,6 +51,7 @@ class login extends StatelessWidget {
                   ),
                   SizedBox(height: 15),
                   CommonTextFormField(
+                    prefixIcon: Icon(Icons.email,color: ePrimaryColor),
                       hintText: "Enter your email",
                       // controller: AuthController.to.lEmail,
                       validator: (data) {
@@ -60,6 +61,7 @@ class login extends StatelessWidget {
                         return null;
                       }),
                   CommonTextFormField(
+                      prefixIcon: Icon(Icons.lock_open,color: ePrimaryColor),
                       hintText: "Enter your password",
                       obscureText: true,
                       // controller: AuthController.to.lPassword,
