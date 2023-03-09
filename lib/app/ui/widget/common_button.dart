@@ -15,21 +15,22 @@ class CommonButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        width: MediaQuery.of(context).size.width - 40,
-        margin: const EdgeInsets.all(15.0),
-        height: 50,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10.0),
-          color: ePrimaryColor,
+        width: MediaQuery.of(context).size.width - 250,
+        margin: const EdgeInsets.all(10.0),
 
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(50.0),
+          color: ePrimaryColor,
         ),
         child: Center(
-          child: CommonText(
-            text: text,
-            fontColor: ewhite,
-            fontSize: AppFontSize.twenty,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: CommonText(
+              text: text,
+              fontColor: eblack,
+              fontSize: AppFontSize.twenty,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),

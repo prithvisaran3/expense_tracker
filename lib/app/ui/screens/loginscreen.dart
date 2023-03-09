@@ -2,8 +2,12 @@ import 'dart:math';
 import 'dart:ui';
 
 import 'package:expense_tracker/app/ui/screens/Signup.dart';
+import 'package:expense_tracker/app/ui/screens/home/bottomnavigationbar.dart';
 import 'package:expense_tracker/app/ui/screens/homescreen.dart';
 import 'package:expense_tracker/app/ui/themes/app_colors.dart';
+import 'package:expense_tracker/app/ui/themes/app_font.dart';
+import 'package:expense_tracker/app/ui/widget/common_button.dart';
+import 'package:expense_tracker/app/ui/widget/common_text.dart';
 import 'package:expense_tracker/app/ui/widget/common_textform_field.dart';
 import 'package:flutter/material.dart';
 // import 'package:slide_to_act/slide_to_act.dart';
@@ -14,7 +18,6 @@ class login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -24,7 +27,6 @@ class login extends StatelessWidget {
                 // crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Padding(
@@ -33,7 +35,7 @@ class login extends StatelessWidget {
                         text: TextSpan(
                           style: TextStyle(
                             color: ewhite,
-                            fontSize: 52,
+                            fontSize: 48,
                             fontWeight: FontWeight.bold,
                           ),
                           text: "Hey,  \nLogin",
@@ -42,16 +44,17 @@ class login extends StatelessWidget {
                               style: TextStyle(
                                 color: ePrimaryColor,
                               ),
-                              text: " Now.",
+                              text: " "
+                                  "Now.",
                             ),
                           ],
                         ),
                       ),
                     ),
                   ),
-                  SizedBox(height: 15),
+                  SizedBox(height: 10),
                   CommonTextFormField(
-                    prefixIcon: Icon(Icons.email,color: ePrimaryColor),
+                      prefixIcon: Icon(Icons.email, color: ePrimaryColor),
                       hintText: "Enter your email",
                       // controller: AuthController.to.lEmail,
                       validator: (data) {
@@ -61,7 +64,7 @@ class login extends StatelessWidget {
                         return null;
                       }),
                   CommonTextFormField(
-                      prefixIcon: Icon(Icons.lock_open,color: ePrimaryColor),
+                      prefixIcon: Icon(Icons.lock_open, color: ePrimaryColor),
                       hintText: "Enter your password",
                       obscureText: true,
                       // controller: AuthController.to.lPassword,
@@ -73,7 +76,7 @@ class login extends StatelessWidget {
                         }
                         return null;
                       }),
-                  SizedBox(height: 20),
+                  SizedBox(height: 15),
                   // SlideAction(
                   //   borderRadius: 12,
                   //   elevation: 0,
@@ -94,43 +97,24 @@ class login extends StatelessWidget {
                   //     }));
                   //   },
                   // ),
-                  ElevatedButton(
+                  CommonButton(
+                    text: "Login",
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return login();
+                        return Navigation();
                       }));
                     },
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        "Login",
-                        style: TextStyle(color: eblack),
-                      ),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      elevation: 1,
-                      primary: ePrimaryColor,
-                      textStyle: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
                   ),
+
                   SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        "Don't have an account? ",
-                        style: TextStyle(
-                          color: ewhite,
-                          fontWeight: FontWeight.bold,
-                          fontStyle: FontStyle.italic,
-                        ),
+                      CommonText(
+                        text: "Don't have an account? ",
+                        fontColor: ewhite,
+                        fontWeight: FontWeight.bold,
                       ),
                       InkWell(
                         onTap: () {
@@ -139,13 +123,11 @@ class login extends StatelessWidget {
                             return esignup();
                           }));
                         },
-                        child: Text(
-                          "Signup",
-                          style: TextStyle(
-                            color: ePrimaryColor,
-                            fontWeight: FontWeight.bold,
-                            fontStyle: FontStyle.italic,
-                          ),
+                        child: CommonText(
+                          text: "Sign up",
+                          fontColor: ePrimaryColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: AppFontSize.sixteen,
                         ),
                       ),
                     ],
