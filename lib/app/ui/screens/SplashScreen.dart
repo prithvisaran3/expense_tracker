@@ -18,7 +18,7 @@ class _splashState extends State<splash> {
   }
 
   _navigatetohome() async {
-    await Future.delayed(Duration(milliseconds: 3500), () {});
+    await Future.delayed(Duration(seconds: 3), () {});
     Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => login()));
   }
@@ -39,22 +39,24 @@ class _splashState extends State<splash> {
               children: [
                 Align(
                   alignment: Alignment.center,
-                  child: RichText(
-                    text: TextSpan(
-                      style: TextStyle(
-                        color: ewhite,
+                  child: Flexible(
+                    child: RichText(
+                      text: TextSpan(
+                        style: TextStyle(
+                          color: ewhite,
 
-                        fontWeight: FontWeight.bold,
-                      ),
-                      text: "Hello,\n",
-                      children: [
-                        TextSpan(
-                          style: TextStyle(
-                            color: ePrimaryColor,
-                          ),
-                          text: "Welcome",
+                          fontWeight: FontWeight.bold,
                         ),
-                      ],
+                        text: "Hello,\n",
+                        children: [
+                          TextSpan(
+                            style: TextStyle(
+                              color: ePrimaryColor,
+                            ),
+                            text: "Welcome",
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 )

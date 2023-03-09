@@ -1,5 +1,5 @@
 
-import 'package:expense_tracker/app/ui/screens/homescreen.dart';
+// import 'package:expense_tracker/app/ui/screens/homescreen.dart';
 import 'package:expense_tracker/app/ui/screens/loginscreen.dart';
 
 import 'package:expense_tracker/app/ui/themes/app_colors.dart';
@@ -22,12 +22,13 @@ class ExpenseApp extends StatelessWidget {
         scaffoldBackgroundColor: eBackgroundcolor,
         textTheme: Theme.of(context).textTheme.apply(bodyColor: ewhite),
       ),
-      home: AnimatedSplashScreen(
-        splash: splash(),
-        nextScreen: login(),
-        splashTransition: SplashTransition.fadeTransition,
-        backgroundColor: eblack,
-      ),
+      // home: AnimatedSplashScreen(
+      //   splash: splash(),
+      //   nextScreen: login(),
+      //   splashTransition: SplashTransition.fadeTransition,
+      //   backgroundColor: eblack,
+      // ),
+      home: splash(),
     );
   }
 }

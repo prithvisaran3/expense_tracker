@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:expense_tracker/app/ui/themes/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class Navigation extends StatefulWidget {
       child: Center(child: Text("Settings")),
     ),
   ];
-  int pageindex = 0;
+  int pageindex = 2;
 
   @override
   State<Navigation> createState() => _NavigationState();
@@ -30,32 +31,43 @@ class _NavigationState extends State<Navigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: widget.pageindex,
-        type: BottomNavigationBarType.fixed,
-        unselectedItemColor: egrey,
-        elevation: 25,
-        selectedItemColor: egreen,
-        showUnselectedLabels: false,
-        showSelectedLabels: true,
-        selectedLabelStyle: const TextStyle(fontFamily: "Oswald"),
-        selectedIconTheme: const IconThemeData(color: egreen),
-        unselectedIconTheme: const IconThemeData(color: egrey),
+      bottomNavigationBar: CurvedNavigationBar(
+        height: 55,
+        color: ePrimaryColor,
+        backgroundColor: Colors.black,
+        animationDuration: Duration(milliseconds: 300),
+        index: widget.pageindex,
         onTap: (data) {
           setState(() {
             widget.pageindex = data;
           });
-
         },
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.analytics_outlined), label: "Analysis"),
-          BottomNavigationBarItem(icon: Icon(Icons.add),label: "Add"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.calendar_month), label: "Calendar"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person), label: "Profile"),
+          Icon(
+            Icons.home,
+            color: eblack,
+            size: 30,
+          ),
+          Icon(
+            Icons.analytics_outlined,
+            color: eblack,
+            size: 30,
+          ),
+          Icon(
+            Icons.add,
+            color: eblack,
+            size: 40,
+          ),
+          Icon(
+            Icons.calendar_month,
+            color: eblack,
+            size: 30,
+          ),
+          Icon(
+            Icons.person,
+            color: eblack,
+            size: 30,
+          ),
         ],
       ),
       body: widget.pages[widget.pageindex],
